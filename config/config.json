@@ -1,0 +1,26 @@
+{
+  "embedding_config": {
+        "model_name": "all-mpnet-base-v2",
+        "chunking_method": {
+            "method": "semantic",
+            "chunk_size": 100,
+            "num_topics": 5
+        }
+    },
+  "mongo_db": {
+    "uri": "mongodb://localhost:27017/",
+    "database": "ai_data",
+    "collection": "test"
+  },
+  "qdrant_db": {
+        "url": "http://localhost:6333",
+        "collection": "embeddings"
+  },
+  "data_sources": [
+    {
+      "type": "file",
+      "name": "PDF and Text Files",
+      "file_path": "./data/test"
+    }
+  ]
+}

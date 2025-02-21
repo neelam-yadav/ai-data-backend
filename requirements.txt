@@ -1,0 +1,16 @@
+pymongo
+psycopg2-binary
+PyPDF2
+python-docx
+boto3
+requests
+beautifulsoup4
+six
+kafka-python
+qdrant-client
+sentence-transformers
+nltk
+fastapi
+sqlalchemy
+alembic
+uvicorn

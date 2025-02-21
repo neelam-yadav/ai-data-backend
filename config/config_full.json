@@ -1,0 +1,54 @@
+{
+  "mongo_db": {
+    "uri": "mongodb://localhost:27017/",
+    "database": "ai_data",
+    "collection": "data_sources"
+  },
+  "data_sources": [
+    {
+      "type": "file",
+      "name": "PDF and Text Files",
+      "file_path": "./data/docs"
+    },
+    {
+      "type": "confluence",
+      "name": "Confluence Pages",
+      "api_url": "https://your-confluence-domain/rest/api/content",
+      "auth": {
+        "username": "your_username",
+        "api_token": "your_api_token"
+      }
+    },
+    {
+      "type": "database",
+      "name": "SQL Database",
+      "db_type": "mysql",
+      "connection": {
+        "host": "localhost",
+        "port": 3306,
+        "username": "user",
+        "password": "password",
+        "database": "test_db"
+      },
+      "query": "SELECT * FROM your_table"
+    },
+    {
+      "type": "log",
+      "name": "Application Logs",
+      "file_path": "/path/to/logs/folder"
+    },
+    {
+      "type": "datalake",
+      "name": "S3 Data Lake",
+      "bucket_name": "your-bucket-name",
+      "prefix": "path/to/data/"
+    },
+    {
+      "type": "stream",
+      "name": "Kafka Stream",
+      "bootstrap_servers": "localhost:9092",
+      "topic": "your_topic_name",
+      "group_id": "your_group_id"
+    }
+  ]
+}
